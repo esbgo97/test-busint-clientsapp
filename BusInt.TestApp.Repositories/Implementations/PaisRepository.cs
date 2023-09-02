@@ -23,9 +23,24 @@ namespace BusInt.TestApp.Repositories.Implementations
             return _context.Paises.ToListAsync();
         }
 
-        public Task<int> Save(Pais entity)
+        public Task<Pais> GetByCodeAsync(string code)
         {
-            throw new NotImplementedException();
+            return _context.Paises.FirstOrDefaultAsync(p => p.Codpais == code);
+        }
+
+        public async Task<int> Save(Pais entity)
+        {
+
+            var pais = await GetByCodeAsync(entity.Codpais);
+
+            if(pais != null)
+            {
+                throw new ApplicationException($"Ya existe el pais con el codigo {entity.Codpais}");
+            }
+
+            _context.Paises.Add(entity).State = EntityState.Added;
+            return await _context.SaveChangesAsync();
+                 
         }
 
         public Task<bool> Update(Pais entity)
