@@ -192,7 +192,6 @@
             groupBox2.TabIndex = 6;
             groupBox2.TabStop = false;
             groupBox2.Text = "Contacto";
-            groupBox2.Enter += groupBox2_Enter;
             // 
             // txtEmail
             // 
@@ -252,7 +251,6 @@
             label9.Size = new Size(49, 28);
             label9.TabIndex = 6;
             label9.Text = "País:";
-            label9.Click += label9_Click;
             // 
             // txtNeighbornhood
             // 
@@ -494,6 +492,7 @@
             Controls.Add(label1);
             Name = "ClientRegister";
             Text = "AppTest - Registrar Cliente";
+            Load += ClientRegister_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);

@@ -1,13 +1,18 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BusInt.TestApp.Models.Entities
 {
+    [Table("maestro_paises")]
     public class Pais
     {
         [Key]
-        public int Id { get; set; }
-        public string Codigo { get; set; }
-        public string Nombre { get; set; }
-        public bool Active { get; set; }
+        public string Codpais { get; set; }
+
+        public string? Cod { get; set; }
+
+        public string? Nompais { get; set; }
+
+        public bool? Inactivo { get; set; }
     }
 }

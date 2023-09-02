@@ -16,15 +16,16 @@ namespace BusInt.TestApp.Models.Entities
         public DateTime Birth{ get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
-        public int Country { get; set; }
+        public string Country { get; set; }
         public string Address { get; set; }
         public string Neighbornhood { get; set; }
-        public int CivilStatus { get; set; }
+        public string CivilStatus { get; set; }
         public int NumChild { get; set; }
         public string Job { get; set; }
 
         public bool AcceptTerm { get; set; }
         public bool AcceptData { get; set; }
         public bool AcceptNotifications { get; set; }
+        public string City { get; set; }
     }
 }

@@ -3,14 +3,19 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BusInt.TestApp.Models.Entities
 {
-    [Table("")]
+    [Table("dian-ciudades")]
     public class Ciudad
     {
-        [Key]
-        public int Id { get; set; }
+        [Key, Column("codigoDian")]
         public string DianCode { get; set; }
+
+        [Column("nomciuddian")]
         public string DianName { get; set; }
+
+        [Column("nomdptodian")]
         public string DianDepartmentName { get; set; }
+        
+        [Column("CodDep")]
         public string DepartmentCode { get; set; }
     }
 }

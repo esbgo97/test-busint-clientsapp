@@ -42,10 +42,16 @@ namespace BusInt.TestApp
 
             //await Task.Run(() =>
             //{
-                ClientRegister clientRegisterForm = new ClientRegister();
-                clientRegisterForm.Show();
+            ClientRegister clientRegisterForm = new ClientRegister();
+            //clientRegisterForm.FormClosed+= onClosedCreate;
+            clientRegisterForm.Show();
 
             //});
+        }
+
+        private void onClosedCreate()
+        {
+
         }
     }
 }
